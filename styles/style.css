@@ -1,0 +1,26 @@
+body {
+  background-color: #e9e6ef;
+  padding: 60px 0px 50px 60px;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contaner {
+  width: 85%;
+  height: 500px;
+  background-color: #db2828;
+  margin-left: 30px;
+}
+
+.iside {
+  width: 7%;
+  background-color: royalblue;
+}
+/*# sourceMappingURL=style.css.map */
