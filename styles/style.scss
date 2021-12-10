@@ -1,27 +1,78 @@
 @import "method";
 @import "variable";
-body{
-    background-color: $color-background;
-   padding: 60px 0px 50px 60px;
-
-   
+@mixin qure {
+    @media (max-width:800px ) {
+        font-size: 2rem;
+    }
 }
-section{
+body {
+    background-color: $color-background;
+    padding: 60px 0px 50px 60px;
+    
+}
+section {
     display: flex;
     justify-content: space-between;
-    
-
 }
-.contaner{
-    width: 85%;
+.contaner {
+    width: 90%;
     height: 500px;
-    background-color: rgb(219, 40, 40);
+    background-color: $color-white;
     margin-left: 30px;
+    border-radius: 25px;
+    overflow: hidden;
     
- 
+    ;
+    .profile {
+        background-color: $color-purple;
+        width: 30%;
+
+        height: 100%;
+    }
 }
-.iside{
+.iside {
     width: 7%;
-    
-    background-color: royalblue;
+
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .menu{
+        background-color: $color-white;
+        width:auto;
+        height: 66%;
+        width: 73%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+
+        
+      
+        border-radius: 40px;
+        i{
+            font-size: 2.5rem;
+            color:$color-purple2;
+           @include qure;
+        }
+ 
+    }
+    .rghit-and-left{
+        background-color: $color-white;
+        
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        
+      
+        border-radius: 40px;
+        i{
+            font-size: 3rem;
+            color: $color-purple2;
+        }
+    }
 }
