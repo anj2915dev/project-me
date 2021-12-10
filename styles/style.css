@@ -1,6 +1,25 @@
 body {
   background-color: #e9e6ef;
-  padding: 60px 0px 50px 60px;
+}
+
+@media (min-width: 800px) {
+  body {
+    padding: 60px 0px 60px 60px;
+  }
+}
+
+.navbar {
+  text-align: right;
+}
+
+@media (min-width: 800px) {
+  .navbar {
+    background-color: #cabbbb;
+  }
+}
+
+.navbar i {
+  font-size: 3rem;
 }
 
 section {
@@ -19,12 +38,52 @@ section {
   margin-left: 30px;
   border-radius: 25px;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .contaner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(0, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    height: 100%;
+  }
+}
+
+.contaner .content {
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+@media (min-width: 800px) {
+  .contaner .content {
+    background-color: #cabbbb;
+  }
+}
+
+@media (max-width: 800px) {
+  .contaner .content {
+    position: absolute;
+    height: auto;
+  }
 }
 
 .contaner .profile {
   background-color: #952ff3;
   width: 30%;
   height: 100%;
+}
+
+@media (max-width: 800px) {
+  .contaner .profile {
+    visibility: hidden;
+  }
 }
 
 .iside {
@@ -42,6 +101,12 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 800px) {
+  .iside {
+    visibility: hidden;
+  }
 }
 
 .iside .menu {
@@ -71,9 +136,9 @@ section {
   color: #654efe;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
   .iside .menu i {
-    font-size: 2rem;
+    background-color: #cabbbb;
   }
 }
 
