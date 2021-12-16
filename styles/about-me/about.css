@@ -1,0 +1,48 @@
+.conten-ebout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3rem;
+}
+
+.conten-ebout .Information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+  height: 170px;
+}
+
+.conten-ebout .Information .item-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.conten-ebout .Information .item-form .title-info {
+  color: #654efe;
+  font-size: 1.5rem;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.conten-ebout .Information .item-form .value-info {
+  font-size: 1rem;
+}
+
+.conten-ebout .description {
+  width: 50%;
+  height: 170px;
+  background-color: #996761;
+}
+/*# sourceMappingURL=about.css.map */

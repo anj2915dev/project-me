@@ -1,0 +1,53 @@
+@mixin respansave-grid {
+    @media (max-width: 746px) {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        height: 100%;
+    }
+}
+// hover btn
+@mixin hover-tag {
+    &:hover {
+        background-color: white;
+        color: $color-purple;
+    }
+}
+
+@mixin respansave-height {
+    @media (max-width: 746px) {
+       @content;
+    }
+}
+// visable by displey one
+@mixin visable-none {
+    @media (max-width: 746px) {
+        display: none;
+    }
+}
+// pading 4 sides
+@mixin pading-4($r, $l, $t, $b) {
+    @media (min-width: 746px) {
+        padding: $r $l $t $b;
+    }
+}
+// size 746px
+@mixin min-size-746 {
+    @media (min-width: 746px) {
+        @content;
+    }
+}
+@mixin max-width-700 {
+    @media (max-width: 746px) {
+        max-width: 700px;
+    }
+}
+@mixin max-width-1100 {
+    @media (max-width: 1100px) {
+        @content;
+    }
+}
+@mixin max-width {
+    @media (max-width: 900px) {
+        @content;
+    }
+}

@@ -1,0 +1,40 @@
+@import "../method";
+@import "../Variable";
+
+.conten-ebout{
+    display: flex;
+    padding:$pading-about;
+    .Information{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+     
+        width: 50%;
+        height: 170px;
+      
+        .item-form{
+            display: flex;
+  align-items: center;
+           
+           
+            .title-info{
+                color:$color-purple2;
+                font-size: $size-titl2;
+                margin-left: 5px;
+                font-weight: bold
+            }
+            .value-info{
+                font-size: 1rem;
+                
+            }
+        }
+    
+    }
+    .description{
+        width: 50%;
+        height: 170px;
+        background-color: rgb(153, 103, 97);
+   
+    }
+
+}
