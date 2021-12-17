@@ -1,40 +1,53 @@
-@import "../method";
+@import "../mixin";
 @import "../Variable";
 
-.conten-ebout{
-    display: flex;
-    padding:$pading-about;
-    .Information{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-     
-        width: 50%;
-        height: 170px;
-      
-        .item-form{
-            display: flex;
-  align-items: center;
-           
-           
-            .title-info{
-                color:$color-purple2;
-                font-size: $size-titl2;
-                margin-left: 5px;
-                font-weight: bold
-            }
-            .value-info{
-                font-size: 1rem;
-                
-            }
-        }
-    
-    }
-    .description{
-        width: 50%;
-        height: 170px;
-        background-color: rgb(153, 103, 97);
-   
-    }
+.conten-ebout {
+  @include flex(row-reverse, space-between, none);
 
+  padding: 0.6rem 2rem;
+  .Information {
+    @include flex(column, space-between, none);
+    width: 47%;
+    height: 170px;
+
+    .item-form {
+      display: flex;
+      align-items: center;
+      font-size: $size-titl2;
+
+      .title-info {
+        color: $color-purple2;
+        margin-left: 5px;
+        font-weight: bold;
+      }
+      .value-info {
+        color: $color_gris;
+      }
+    }
+  }
+  .description {
+    width: 47%;
+    height: 170px;
+  }
+}
+.content {
+  background-color: brown;
+  overflow: scroll;
+}
+.expertise {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  background-color: blue;
+  .content_exprtis {
+    height: 300px;
+
+    background-color: chartreuse;
+  }
+  .item2,
+  .item4 {
+    background-color: crimson;
+    grid-column: 2;
+  }
 }
