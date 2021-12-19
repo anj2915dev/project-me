@@ -1,57 +1,51 @@
 @mixin respansave-grid {
-  @media (max-width: 746px) {
+  @media (max-width: 640px) {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     height: 100%;
   }
 }
+@mixin pading-4($t,$b,$r,$l) {
+  padding:$t $b $r $l  ;
+}
 
 // hover btn
 @mixin hover-tag {
   &:hover {
-    background-color: white;
-    color: $color-purple;
+    background-color: $color-purple;
+    color: white ;
   }
 }
 
-@mixin respansave-height {
-  @media (max-width: 746px) {
+
+@mixin sm {
+  @media (min-width: 640px) {
     @content;
   }
 }
-// visable by displey one
-@mixin visable-none {
-  @media (max-width: 746px) {
-    display: none;
-  }
-}
-// pading 4 sides
-@mixin pading-4($r, $l, $t, $b) {
-  @media (min-width: 746px) {
-    padding: $r $l $t $b;
-  }
-}
-// size 746px
-@mixin min-size-746 {
-  @media (min-width: 746px) {
+@mixin sm_max {
+  @media (max-width: 640px) {
     @content;
   }
 }
-@mixin max-width-700 {
-  @media (max-width: 746px) {
-    max-width: 700px;
-  }
-}
-@mixin max-width-1100 {
-  @media (max-width: 1100px) {
+@mixin md {
+  @media (min-width: 768px) {
     @content;
   }
 }
-@mixin max-width {
-  @media (max-width: 900px) {
+@mixin md_max {
+  @media (max-width: 768px) {
     @content;
   }
 }
+
+@mixin lg {
+  @media (min-width: 1240px) {
+    @content;
+  }
+}
+
+
 
 @mixin height_width {
   width: 100%;
@@ -66,20 +60,26 @@
 }
 
 // start respansave
-@mixin sm_grid_repeat_1($number) {
+@mixin sm_grid_repeat($number) {
   @media (max-width: 640px) {
     display: grid;
     grid-template-columns: repeat($number, minmax(0, 1fr));
   }
 }
-@mixin md_grid_repeat_1($number) {
+@mixin md_grid_repeat($number) {
   @media (max-width: 768px) {
     display: grid;
     grid-template-columns: repeat($number, minmax(0, 1fr));
   }
 }
+@mixin lg_grid_repeat($number) {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat($number, minmax(0, 1fr));
+    }
+  }
 @mixin grid_column($max-width, $number) {
-  @media (max-width: $max-width) {
+  @media (min-width: $max-width) {
     grid-column: $number;
   }
 }

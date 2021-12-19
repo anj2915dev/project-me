@@ -3,12 +3,14 @@
 
 .conten-ebout {
   @include flex(row-reverse, space-between, none);
-
+  @include md_grid_repeat(1);
   padding: 0.6rem 2rem;
   .Information {
     @include flex(column, space-between, none);
     width: 47%;
-    height: 170px;
+
+    margin: 1rem;
+    @include grid_column(768px, 1);
 
     .item-form {
       display: flex;
@@ -27,27 +29,43 @@
   }
   .description {
     width: 47%;
-    height: 170px;
+    @include sm_max {
+      width: 100%;
+    }
+    margin: 1rem;
   }
 }
 .content {
-  background-color: brown;
   overflow: scroll;
 }
 .expertise {
   width: 100%;
   height: auto;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  background-color: blue;
-  .content_exprtis {
-    height: 300px;
 
-    background-color: chartreuse;
-  }
-  .item2,
-  .item4 {
-    background-color: crimson;
-    grid-column: 2;
+  .expertise_content {
+    @include lg_grid_repeat(2);
+    @include sm_grid_repeat(1);
+    .items {
+     
+      padding: 20px;
+      @include sm_max{
+      height: auto;
+      }
+      i {
+        font-size: 4rem;
+        color: $color-purple;
+      }
+
+      .item1 {
+        @include grid_column(640px, 1);
+
+        @include grid_column(768px, 2);
+      }
+      .item2 {
+        @include grid_column(640px, 1);
+
+        @include grid_column(768px, 2);
+      }
+    }
   }
 }

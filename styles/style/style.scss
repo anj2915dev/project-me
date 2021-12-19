@@ -3,17 +3,22 @@
 
 body {
   background-color: $color-background;
-  @include pading-4(20px, 60px, 0px, 0px);
+  @include pading-4(67px, 60px, 0px, 0px);
+  @include sm_max {
+    padding: 0;
+  }
 
   direction: rtl;
-  @include max-width-700;
+}
+.none {
+  display: none;
 }
 .navbar {
   text-align: right;
   @include height_width;
   display: flex;
   background-color: $color-white;
-  @include min-size-746 {
+  @include sm {
     display: none;
   }
   i {
@@ -26,18 +31,12 @@ body {
     z-index: 1;
     transform: translate(500px);
 
-    @include min-size-746 {
-      display: none;
-    }
     transition: transform 1s ease-in-out;
   }
 }
 section {
   @include flex(row, space-between, none);
   height: 500px;
-  @include min-size-746 {
-    margin-top: 40px;
-  }
 }
 .contaner {
   @include height_width;
@@ -46,18 +45,19 @@ section {
   border-radius: 15px;
   overflow: hidden;
   @include flex(row, none, none);
-  @include respansave-height {
-    border-radius: 0;
-    margin-left: 0;
+  @include sm_max {
+    border-radius: 0%;
+    width: 100%;
+    margin-left: 0px;
   }
-
   @include respansave-grid;
 
   .content {
     @include height_width;
     background-color: $color-white;
-    @include respansave-height {
-      height: auto;
+    @include sm_max {
+    
+      width: 100%;
     }
     grid-column: 1;
     padding: $pading-content;
@@ -73,8 +73,13 @@ section {
   .profile {
     background-color: $color-purple;
     width: 40%;
+    padding: 10px;
+
     @include flex(column, space-evenly, center);
-    @include visable-none;
+
+    @include sm_max {
+      display: none;
+    }
     height: 100%;
     .top-profile {
       display: flex;
@@ -84,16 +89,13 @@ section {
 
       height: 80%;
       .img-profile {
-        width: 40%;
+        width: 100%;
         height: 35%;
-        @include max-width-1100 {
-          height: 28%;
+        @include md {
+          width: 60%;
+          height: 40%;
         }
-        @include max-width {
-          width: 55%;
-          height: 28%;
-        }
-
+      
         border-radius: 50%;
         background-color: chartreuse;
       }
@@ -109,26 +111,29 @@ section {
     }
 
     .btn {
-      padding: 1rem 4.5rem;
+      width: 60%;
+      height: 10%;
       border-radius: 2rem;
       border: 2px solid white;
       background-color: $color-purple;
-      cursor: pointer;
+      // cursor: pointer;
       transition: all 0.5s ease-in-out;
-
+      background-color: antiquewhite;
       @include hover-tag;
     }
   }
 }
 .iside {
+  @include sm_max {
+    display: none;
+  }
   width: 7%;
 
   @include flex(column, space-between, center);
 
-  @include visable-none;
   i {
-    color: $color-purple2;
-    cursor: pointer;
+    color: $color_gris;
+    // cursor: pointer;
   }
   .menu {
     background-color: $color-white;
@@ -139,17 +144,31 @@ section {
     flex-wrap: wrap;
     border-radius: 40px;
     i {
-      font-size: 2.5rem;
+      @include md_max {
+        font-size: 1.9rem;
+      }
+      @include md {
+        font-size: 2.5rem;
+      }
     }
   }
   .rghit-and-left {
     background-color: $color-white;
     width: 73%;
     height: 30%;
+
+    // max 768 px
+  
+
     @include flex(column, space-evenly, center);
     border-radius: 40px;
     i {
-      font-size: 3rem;
+      @include md_max {
+        font-size: 2rem;
+      }
+      @include md {
+        font-size: 3rem;
+      }
     }
   }
 }
