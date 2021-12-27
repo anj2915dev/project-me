@@ -7,7 +7,9 @@
   padding: 0.6rem 2rem;
   .Information {
     @include flex(column, space-between, none);
-    width: 47%;
+ 
+     width: 47%;
+   
 
     margin: 1rem;
     @include grid_column(768px, 1);

@@ -4,8 +4,12 @@
 body {
   background-color: $color-background;
   @include pading-4(67px, 60px, 0px, 0px);
+  max-width: 1400px;
+  position: relative;
+  
   @include sm_max {
     padding: 0;
+    overflow:hidden;
   }
 
   direction: rtl;
@@ -15,28 +19,54 @@ body {
 }
 .navbar {
   text-align: right;
-  @include height_width;
-  display: flex;
+
+  width: 100%;
   background-color: $color-white;
+
   @include sm {
     display: none;
   }
-  i {
+  .bx {
     font-size: 3rem;
-    z-index: 2;
-  }
-  .menuandprof {
-    width: 30%;
-
+    position: fixed;
+    padding: 1px;
+    background-color: $color-purple;
+    border-radius: 100%;
+    color: $color-white;
+    margin: 10px;
     z-index: 1;
-    transform: translate(500px);
+  }
+}
+.menuandprof {
+  background-color: $color-purple;
+  width: 0;
+  overflow: hidden;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
 
-    transition: transform 1s ease-in-out;
+  align-items: center;
+  transition: all 2s ease-in-out;
+
+  @include sm {
+    display: none;
+  }
+  .img-profile {
+    margin-top: 70px;
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+    background-color: chartreuse;
   }
 }
 section {
   @include flex(row, space-between, none);
   height: 500px;
+  @include sm_max {
+    height: 645px;
+  }
 }
 .contaner {
   @include height_width;
@@ -44,11 +74,13 @@ section {
   margin-left: 30px;
   border-radius: 15px;
   overflow: hidden;
+
   @include flex(row, none, none);
   @include sm_max {
     border-radius: 0%;
     width: 100%;
     margin-left: 0px;
+    padding: 10px;
   }
   @include respansave-grid;
 
@@ -56,7 +88,6 @@ section {
     @include height_width;
     background-color: $color-white;
     @include sm_max {
-    
       width: 100%;
     }
     grid-column: 1;
@@ -72,7 +103,8 @@ section {
 
   .profile {
     background-color: $color-purple;
-    width: 40%;
+    width: 30%;
+
     padding: 10px;
 
     @include flex(column, space-evenly, center);
@@ -89,13 +121,9 @@ section {
 
       height: 80%;
       .img-profile {
-        width: 100%;
-        height: 35%;
-        @include md {
-          width: 60%;
-          height: 40%;
-        }
-      
+        width: 150px;
+        height: 150px;
+
         border-radius: 50%;
         background-color: chartreuse;
       }
@@ -111,7 +139,7 @@ section {
     }
 
     .btn {
-      width: 60%;
+      width: 150px;
       height: 10%;
       border-radius: 2rem;
       border: 2px solid white;
@@ -137,9 +165,9 @@ section {
   }
   .menu {
     background-color: $color-white;
-    width: auto;
+    width: 60px;
     height: 66%;
-    width: 73%;
+
     @include flex(column, space-around, center);
     flex-wrap: wrap;
     border-radius: 40px;
@@ -154,11 +182,10 @@ section {
   }
   .rghit-and-left {
     background-color: $color-white;
-    width: 73%;
+    width: 60px;
     height: 30%;
 
     // max 768 px
-  
 
     @include flex(column, space-evenly, center);
     border-radius: 40px;
