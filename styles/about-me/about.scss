@@ -1,15 +1,19 @@
 @import "../mixin";
 @import "../Variable";
 
+.menu {
+  width: 200px;
+  opacity: 1;
+}
+
 .conten-ebout {
   @include flex(row-reverse, space-between, none);
   @include md_grid_repeat(1);
   padding: 0.6rem 2rem;
   .Information {
     @include flex(column, space-between, none);
- 
-     width: 47%;
-   
+
+    width: 47%;
 
     margin: 1rem;
     @include grid_column(768px, 1);
@@ -48,10 +52,9 @@
     @include lg_grid_repeat(2);
     @include sm_grid_repeat(1);
     .items {
-     
       padding: 20px;
-      @include sm_max{
-      height: auto;
+      @include sm_max {
+        height: auto;
       }
       i {
         font-size: 4rem;
@@ -67,6 +70,65 @@
         @include grid_column(640px, 1);
 
         @include grid_column(768px, 2);
+      }
+    }
+  }
+}
+.evidence {
+  width: 100%;
+  height: auto;
+  
+
+  .title_evidence {
+    @include flex(row, space-between, center);
+  }
+  .item_evid {
+    z-index: 0;
+    padding: 20px;
+    @include flex(row, space-evenly, center);
+    @include md_max {
+      @include flex(column, space-between, center);
+    }
+   
+    .item_child {
+      width: 280px;
+      height: 300px;
+      border: 2px solid $color_gray;
+      position: relative;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 0.5rem;
+      transition: all 1s ease-in-out;
+      &:hover{
+       
+        transform:scale(1.05);
+        box-shadow: 0 5px 6px -1px #cccccc, 0 2px 5px -2px #cccccc
+     
+
+        
+    
+        
+      }
+
+      @include md_max {
+        margin-top: 3.5rem;
+      }
+      .img-profile {
+        border: 1px solid $color_gray;
+
+        background-color: white;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        position: absolute;
+        top: -50px;
+
+        right: 30%;
+      }
+      p {
+        text-align: center;
+        margin-top: 5rem;
+        height: 20px;
       }
     }
   }

@@ -1,3 +1,8 @@
+.menu {
+  width: 200px;
+  opacity: 1;
+}
+
 .conten-ebout {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,5 +153,104 @@
     -ms-grid-column: 2;
     grid-column: 2;
   }
+}
+
+.evidence {
+  width: 100%;
+  height: auto;
+}
+
+.evidence .title_evidence {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.evidence .item_evid {
+  z-index: 0;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 960px) {
+  .evidence .item_evid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.evidence .item_evid .item_child {
+  width: 280px;
+  height: 300px;
+  border: 2px solid #ededee;
+  position: relative;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.evidence .item_evid .item_child:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 5px 6px -1px #cccccc, 0 2px 5px -2px #cccccc;
+          box-shadow: 0 5px 6px -1px #cccccc, 0 2px 5px -2px #cccccc;
+}
+
+@media (max-width: 960px) {
+  .evidence .item_evid .item_child {
+    margin-top: 3.5rem;
+  }
+}
+
+.evidence .item_evid .item_child .img-profile {
+  border: 1px solid #ededee;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position: absolute;
+  top: -50px;
+  right: 30%;
+}
+
+.evidence .item_evid .item_child p {
+  text-align: center;
+  margin-top: 5rem;
+  height: 20px;
 }
 /*# sourceMappingURL=about.css.map */

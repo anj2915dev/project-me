@@ -34,7 +34,7 @@
   }
 }
 @mixin md_max {
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     @content;
   }
 }
@@ -49,6 +49,12 @@
     @content;
   }
 }
+@mixin sm_height {
+  @media (max-height:570px) {
+    @content;
+  }
+}
+
 
 
 
