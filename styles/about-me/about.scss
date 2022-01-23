@@ -77,7 +77,6 @@
 .evidence {
   width: 100%;
   height: auto;
-  
 
   .title_evidence {
     @include flex(row, space-between, center);
@@ -89,7 +88,7 @@
     @include md_max {
       @include flex(column, space-between, center);
     }
-   
+
     .item_child {
       width: 280px;
       height: 300px;
@@ -98,16 +97,11 @@
       border-radius: 1rem;
       margin-bottom: 1rem;
       margin-left: 0.5rem;
-      transition: all 1s ease-in-out;
-      &:hover{
-       
-        transform:scale(1.05);
-        box-shadow: 0 5px 6px -1px #cccccc, 0 2px 5px -2px #cccccc
-     
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
 
-        
-    
-        
+        @include shadow_xl;
       }
 
       @include md_max {

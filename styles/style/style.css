@@ -363,4 +363,34 @@ section {
     font-size: 3rem;
   }
 }
+
+nav {
+  position: relative;
+}
+
+nav i:hover {
+  color: #654efe;
+}
+
+nav span {
+  background-color: #654efe;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 90%;
+  padding: 3px;
+  color: white;
+  margin-top: 10px;
+  -webkit-transform: translate(-100px);
+          transform: translate(-100px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+nav i:hover span {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,3 @@
-
 @import "../mixin";
 @import "../Variable";
 
@@ -10,7 +9,6 @@ body {
 
   @include sm_max {
     padding: 0;
-  
   }
 
   direction: rtl;
@@ -40,7 +38,7 @@ body {
 }
 .menuandprof {
   background-color: $color-purple2;
-z-index: 1;
+  z-index: 1;
   width: 0;
   height: 100%;
   opacity: 0;
@@ -94,8 +92,6 @@ z-index: 1;
 
     border-radius: 50%;
     background-color: chartreuse;
-  
- 
   }
 }
 section {
@@ -118,8 +114,6 @@ section {
     width: 100%;
     margin-left: 0px;
     padding: 10px;
- 
-
   }
   @include respansave-grid;
 
@@ -136,7 +130,6 @@ section {
       font-size: $size-title;
       .me {
         color: $color-purple;
-     
       }
     }
   }
@@ -238,4 +231,28 @@ section {
       }
     }
   }
+}
+nav {
+  position: relative;
+      i:hover{
+        color: $color-purple2;
+      }
+  span {
+    background-color:$color-purple2;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 90%;
+    padding: 3px;
+    color: white;
+    margin-top: 10px;
+    transform: translate(-100px);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+  }
+  i:hover span {
+    transform: translate(0);
+    opacity: 1;
+  }
+
 }
